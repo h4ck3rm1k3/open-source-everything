@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 43</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text41.html">Back</a> <a href="text43.html">Continue</a> <a href="text109.html">Last page</a> <a href="open_source_everything.html">Overview</a> <a href="img42.html">Graphics</a></center><br>
+<h1>Fortran 1953</h1>
+<p>John Warner Backus</p>
+<p>*     euclid.f (FORTRAN 77)</p>
+<p>*     Find greatest common divisor using the Euclidean algorithm</p>
+<p>      PROGRAM EUCLID</p>
+<p>        PRINT *, 'A?'</p>
+<p>        READ *, NA</p>
+<p>        IF (NA.LE.0) THEN</p>
+<p>          PRINT *, 'A must be a positive integer.'</p>
+<p>          STOP</p>
+<p>        END IF</p>
+<p>        PRINT *, 'B?'</p>
+<p>        READ *, NB</p>
+<p>        IF (NB.LE.0) THEN</p>
+<p>          PRINT *, 'B must be a positive integer.'</p>
+<p>          STOP</p>
+<p>        END IF</p>
+<p>        PRINT *, 'The GCD of', NA, ' and', NB, ' is', NGCD(NA, NB), '.'</p>
+<p>        STOP</p>
+<p>      END</p>
+<p>      FUNCTION NGCD(NA, NB)</p>
+<p>        IA = NA</p>
+<p>        IB = NB</p>
+<p>    1   IF (IB.NE.0) THEN</p>
+<p>          ITEMP = IA</p>
+<p>          IA = IB</p>
+<p>          IB = MOD(ITEMP, IB)</p>
+<p>          GOTO 1</p>
+<p>        END IF</p>
+<p>        NGCD = IA</p>
+<p>        RETURN</p>
+<p>      END</p>
+</body>
+</html>
